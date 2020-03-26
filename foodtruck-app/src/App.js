@@ -6,6 +6,7 @@ import PrivateRoute from "./authorization/PrivateRoute"
 import Home from "./pages/Home"
 import Login from './components/Login';
 import NavBar from './components/NavBar';
+import RegistrationForm from "./components/RegisterForm";
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
       <Route exact path="/login" component={Login} />
       <Route exact path="/register" component={() => {
         return (
-          <div>I am the registration form!</div>
+          <RegistrationForm />
         )
       }} />
       {/* <PrivateRoute path="/home"></PrivateRoute>
