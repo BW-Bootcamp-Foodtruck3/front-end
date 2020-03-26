@@ -111,17 +111,25 @@ Html{
   justify-content: space-around;
 }
 
-.registration-form__input {
-  width: 60%;
-  height: 40px;
-  margin: 0 auto;
+.registration-form__first-container {
+  border: 2px solid blue;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.input-label {
+
+.input-container__input {
+  width: 20%;
+  height: 40px;
+  margin: 0 2% 2% 2%;
+}
+
+.input-container__label {
   font-family: 'PT Sans', sans-serif;
   font-size: 1.5rem;
-  margin: 0 auto;
-  text-justify: center;
+  
 }
 
 .registration-form__select {
