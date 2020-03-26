@@ -5,6 +5,7 @@ export const useForm = (defaultValues, cb) => {
 
     const setForm = (e) => {
         setValues({...values, [e.target.name]: e.target.value })
+        // console.log(values)
     }
     
     const submitForm = (e) => {
