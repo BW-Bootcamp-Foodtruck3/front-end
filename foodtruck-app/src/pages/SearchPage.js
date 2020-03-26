@@ -3,7 +3,7 @@ import { useForm } from "../hooks/useForm";
 import TruckSearchCard from "../components/TruckSearchCard";
 import { Container, Form, FormGroup, Label, Input, Button } from "reactstrap";
 
-const SearchPage = ({ searchResults, setSearchTerm }) => {
+const SearchPage = ({ searchResults, setSearchTerm, setSelectedData }) => {
   const [values, setValues, submitForm] = useForm({ searchTerm: "" }, data => {
     setSearchTerm(values.searchTerm)
   });
@@ -28,7 +28,7 @@ const SearchPage = ({ searchResults, setSearchTerm }) => {
         </FormGroup>
       </Form>
       <div>
-        {searchResults && searchResults.map((truck) => <TruckSearchCard key={truck.id} {...truck} />)}
+        {searchResults && searchResults.map((truck) => <TruckSearchCard key={truck.id} {...truck} setSelectedData={setSelectedData} />)}
       </div>
     </Container>
   );

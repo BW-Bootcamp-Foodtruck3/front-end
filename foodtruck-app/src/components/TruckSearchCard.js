@@ -2,7 +2,8 @@ import React from "react";
 import { Media } from "reactstrap";
 import { Link } from "react-router-dom";
 
-const TruckSearchCard = ({ truckName, imageOfTruck, cusineType }) => {
+const TruckSearchCard = (props) => {
+  const { id, truckName, imageOfTruck, cusineType, setSelectedData } = props
   const handleHighlight = e => {
     const style = e.currentTarget.style;
     if (style.background === "dimgray") {
@@ -15,11 +16,12 @@ const TruckSearchCard = ({ truckName, imageOfTruck, cusineType }) => {
   };
 
   return (
-    <Link to="/" style={{ textDecoration: "none" }}>
+    <Link to={`test/${id}`} style={{ textDecoration: "none" }}>
         <Media
         style={styles.trucksearchcardContainer}
         onMouseOver={e => handleHighlight(e)}
         onMouseOut={e => handleHighlight(e)}
+        onClick={() => setSelectedData(props)}
         >
         <Media left>
             <Media
