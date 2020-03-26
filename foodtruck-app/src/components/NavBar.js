@@ -7,7 +7,6 @@ const NavBar = () => {
 
     return (
     <div>
-        <h1>Food-Truck App</h1>
         <nav className="nav-bar">
           <NavLink className="nav-bar__links" to="/">Home</NavLink>
           <NavLink className="nav-bar__links"  to="/search">search</NavLink>
