@@ -1,17 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { Route } from "react-router-dom";
-
+import SearchBar from "./components/SearchBar"
 import PrivateRoute from "./authorization/PrivateRoute"
 import Home from "./pages/Home"
+import Login from './components/Login';
+import NavBar from './components/NavBar';
 
 function App() {
   return (
     <div>
-      <Route exact to="/" component={Home}></Route> {/*demo purposes*/}
-      {/* <PrivateRoute to="/home"></PrivateRoute>
-      <PrivateRoute to="/truckprofile/:id"></PrivateRoute> */}
+      <NavBar/>
+      <Route exact path="/" component={Home}></Route> {/*demo purposes*/}
+      <Route exact path="/search" component={SearchBar} />
+      <Route exact path="/login" component={Login} />
+      {/* <PrivateRoute path="/home"></PrivateRoute>
+      <PrivateRoute path="/truckprofile/:id"></PrivateRoute> */}
     </div>
   );
 }
