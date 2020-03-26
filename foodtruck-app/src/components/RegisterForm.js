@@ -1,61 +1,102 @@
-import React from "react";
+import React, { useState } from "react";
 // import { withFormik } from 'formik';
 
 const RegistrationForm = () => {
 
+    const [ inputState, setInputState ] = useState("");
+    const [ users, setUsers ] = useState([{
+        business: "",
+        firstName: "",
+        lastName: "",
+        email: "",
+        password: "",
+        street: "",
+        state: "",
+        zipCode: "",
+    }])
+
+    const changeHandler = (event) => {
+        setInputState({...inputState, [event.target.name]: event.target.value});
+        console.log(inputState)
+    }
+
+    const submitHandler = (event) => {
+        event.preventDefault();
+        setUsers([...users,{...inputState, id: Date.now()}])
+        console.log(users);
+    }
+    
 
     return (
-        <form className="registration-form">
+        <form onSubmit={submitHandler} className="registration-form">
+            <label htmlFor="business-name__id" className="input-label">Business Name:</label>
             <input 
                 className="registration-form__input"
                 placeholder="Business Name"
                 type="text"
                 name="business-name"
                 id="business-name__id"
-                // value={}
-                // onChange={}
+                value={inputState.business}
+                onChange={changeHandler}
             ></input>
 
+            <label htmlFor="first-name__id" className="input-label">Owner First Name:</label>
             <input 
                 className="registration-form__input"
                 placeholder="First Name"
                 type="text"
                 name="first-name"
                 id="first-name__id"
-                // value={}
-                // onChange={}
+                value={inputState.firstName}
+                onChange={changeHandler}
             ></input>
 
+            <label htmlFor="last-name__id" className="input-label">Last Name:</label>
             <input
                 className="registration-form__input"
                 placeholder="Last Name"
                 type="text"
                 name="last-name"
                 id="last-name__id"
-                // value={}
-                // onChange={}
+                value={inputState.lastName}
+                onChange={changeHandler}
+            ></input>
+            
+            <label htmlFor="email__id" className="input-label">Email:</label>
+            <input
+                className="registration-form__input"
+                placeholder="Email"
+                type="text"
+                name="email"
+                id="email__id"
+                value={inputState.email}
+                onChange={changeHandler}
+            ></input>
+            
+            <label htmlFor="password__id" className="input-label">New Password:</label>
+            <input
+                className="registration-form__input"
+                placeholder="Password"
+                type="text"
+                name="password"
+                id="password__id"
+                value={inputState.password}
+                onChange={changeHandler}
             ></input>
 
+            <label htmlFor="street-address__id" className="input-label">Street Address:</label>
             <input
                 className="registration-form__input"
                 placeholder="Street Address"
                 type="text"
                 name="street-address"
                 id="street-address__id"
-                // value={}
-                // onChange={}
+                value={inputState.street}
+                onChange={changeHandler}
             ></input>
 
-            <input
-                className="registration-form__select"
-                type="select"
-                name="state-select"
-                id="state-select__id"
-                // value={}
-                // onChange={}
-            ></input>
-
-            <select className="registration-form__select" name="state-select" id="state-select__id">
+            <label htmlFor="state-select__id" className="input-label">State:</label>
+            <select className="registration-form__select" name="state-select" id="state-select__id" value={inputState.state} onChange={changeHandler}>
                 <option value="AL">Alabama</option>
                 <option value="AK">Alaska</option>
                 <option value="AZ">Arizona</option>
@@ -109,15 +150,17 @@ const RegistrationForm = () => {
                 <option value="WY">Wyoming</option>
             </select>	
 
+            <label htmlFor="zip-code__id" className="input-label">Zip Code:</label>
             <input 
                 className="registration-form__input"
                 type="text"
                 name="zip-code"
                 id="zip-code__id"
-                // value={}
-                // onChange={}
+                value={inputState.zipCode}
+                onChange={changeHandler}
             ></input>
 
+            <button type="submit">Register</button>
         </form>
     )
 }
