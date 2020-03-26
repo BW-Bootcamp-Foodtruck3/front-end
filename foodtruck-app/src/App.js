@@ -39,7 +39,7 @@ function App() {
             <RegistrationForm />
           )
         }}/>
-      // {/* <PrivateRoute path="/home"></PrivateRoute>
+      {/* <PrivateRoute path="/home"></PrivateRoute>
       // <PrivateRoute path="/truckprofile/:id"></PrivateRoute> */}
     </div>
   );
