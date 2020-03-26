@@ -7,11 +7,11 @@ const NavBar = () => {
 
     return (
     <div>
-        <h1>Food-Truck App</h1>
         <nav className="nav-bar">
-          <NavLink className="links" to="/">Home</NavLink>
-          <NavLink className="links"  to="/search">search</NavLink>
-          <NavLink className="links"  to="/login">Login</NavLink>
+          <NavLink className="nav-bar__links" to="/">HOME</NavLink>
+          <NavLink className="nav-bar__links"  to="/search">SEARCH</NavLink>
+          <NavLink className="nav-bar__links"  to="/login">LOGIN</NavLink>
+          <NavLink className="nav-bar__links" to="/register">SIGN UP</NavLink>
         </nav>
     </div>
     )

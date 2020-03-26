@@ -7,7 +7,7 @@ import axios from "axios"
 
 const Login = () => {
 const [ values, setValues, submitForm ] = useForm({ 
-    username: '', password: ''},
+    email: '', password: ''},
      (data) => {
     
         axios
@@ -28,7 +28,7 @@ const [ values, setValues, submitForm ] = useForm({
             <form onSubmit={submitForm} >
 
             <label>  
-            <input type="text" onChange={setValues} values={values} name="username" placeholder="username" />
+            <input type="email" onChange={setValues} values={values} name="email" placeholder="email" />
             </label> 
             <label>  
             <input type="password" onChange={setValues} values={values} name="password" placeholder="password" />

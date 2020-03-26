@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import { Route, useLocation } from "react-router-dom";
-
+import RegistrationForm from "./components/RegisterForm";
+import Logo from "./components/LogoHeader";
 import { trucks } from "./DummyData";
 import SearchPage from "./pages/SearchPage"
 import PrivateRoute from "./authorization/PrivateRoute"
@@ -26,15 +27,20 @@ function App() {
   }, [])
   console.log(selectedData)
   return (
-    <div>
+    <div className="application-container">
+      <Logo />
       <NavBar/>
       <Route exact path="/" component={Home}></Route> {/*demo purposes*/}
       <Route exact path="/search" render={() => <SearchPage searchResults={searchResults}  setSearchTerm={setSearchTerm} setSelectedData={setSelectedData} />} />
       <Route exact path="/test/:id" render={() => <TestPage selectedData={selectedData}/>} />
       <Route exact path="/login" component={Login} />
-      {/* <PrivateRoute path="/home"></PrivateRoute>
-      <PrivateRoute path="/truckprofile/:id"></PrivateRoute> */}
-
+      <Route exact path="/register" component={() => {
+          return (
+            <RegistrationForm />
+          )
+        }}/>
+      // {/* <PrivateRoute path="/home"></PrivateRoute>
+      // <PrivateRoute path="/truckprofile/:id"></PrivateRoute> */}
     </div>
   );
 }
