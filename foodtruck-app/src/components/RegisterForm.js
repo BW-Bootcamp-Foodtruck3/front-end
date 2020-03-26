@@ -153,6 +153,7 @@ const RegistrationForm = () => {
             <label htmlFor="zip-code__id" className="input-label">Zip Code:</label>
             <input 
                 className="registration-form__input"
+                placeholder="Zip Code"
                 type="text"
                 name="zip-code"
                 id="zip-code__id"
