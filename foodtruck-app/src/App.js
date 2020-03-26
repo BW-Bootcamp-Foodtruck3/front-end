@@ -14,6 +14,11 @@ function App() {
       <Route exact path="/" component={Home}></Route> {/*demo purposes*/}
       <Route exact path="/search" component={SearchBar} />
       <Route exact path="/login" component={Login} />
+      <Route exact path="/register" component={() => {
+        return (
+          <div>I am the registration form!</div>
+        )
+      }} />
       {/* <PrivateRoute path="/home"></PrivateRoute>
       <PrivateRoute path="/truckprofile/:id"></PrivateRoute> */}
     </div>
