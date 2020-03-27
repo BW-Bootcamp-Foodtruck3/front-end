@@ -59,7 +59,7 @@ const RegistrationForm = () => {
                 onChange={changeHandler}
             ></input>
             
-            {/* <label htmlFor="email__id" className="input-label">Email:</label>
+            <label htmlFor="email__id" className="input-label">Email:</label>
             <input
                 className="registration-form__input"
                 placeholder="Email"
@@ -68,9 +68,9 @@ const RegistrationForm = () => {
                 id="email__id"
                 value={inputState.email}
                 onChange={changeHandler}
-            ></input> */}
+            ></input>
             
-            {/* <label htmlFor="password__id" className="input-label">New Password:</label>
+            <label htmlFor="password__id" className="input-label">New Password:</label>
             <input
                 className="registration-form__input"
                 placeholder="Password"
@@ -79,7 +79,7 @@ const RegistrationForm = () => {
                 id="password__id"
                 value={inputState.password}
                 onChange={changeHandler}
-            ></input> */}
+            ></input>
 
             <label htmlFor="address__id" className="input-label">Street Address:</label>
             <input
