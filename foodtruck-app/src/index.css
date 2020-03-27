@@ -138,3 +138,61 @@ Html{
   border-radius: 15px;
   margin: 0 auto;
 }
+
+.login-form {
+  width:  100px;
+  height: 30px;
+  color: white;
+  background-color: #e72804;
+  border-radius: 15px;
+  margin-left: 45%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.button {
+  background-color: #e72804;
+  border-radius: 15px;
+  margin-top: 20%;
+}
+
+
+
+.profile-container {
+
+  display: flex;
+  background-color: black;
+}
+
+.profile-title{
+
+  font-family: 'PT Sans', sans-serif;
+  font-size: 3.5rem;   
+  margin-bottom: 5%;
+  margin-top: 5%;
+  color: #9904e7;
+}
+
+
+.profile-item {
+
+  width: 40%;
+  margin: 5%;
+  border: 1px solid #04e799;
+}
+
+.profile-info {
+
+  margin-top: 3%;
+  font-size: 2.5rem; 
+  font-family: 'PT Sans', sans-serif;
+  
+
+}
+
+
+.search {
+
+  font-size: 2.5rem;
+  margin-top: 5%;
+}

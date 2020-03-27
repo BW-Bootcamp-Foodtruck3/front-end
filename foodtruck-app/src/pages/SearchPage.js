@@ -8,12 +8,12 @@ const SearchPage = ({ searchResults, setSearchTerm, setSelectedData }) => {
     setSearchTerm(values.searchTerm)
   });
   return (
-    <Container>
+    <Container className="search">
       <Form onSubmit={submitForm}>
         <Label for="searchTerm" style={styles.searchbarLabel}>
           Search for Food Trucks
         </Label>
-        <FormGroup style={styles.searchbarFormGroup}>
+        <FormGroup  style={styles.searchbarFormGroup}>
           <Input
             id="searchTerm"
             type="text"

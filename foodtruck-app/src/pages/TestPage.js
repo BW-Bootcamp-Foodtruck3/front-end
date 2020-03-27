@@ -21,8 +21,14 @@ const TestPage =  (props) => {
             }
         )
     }, [])
+    console.log(selectedData)
   return (
-    <div style={{ margin: "0 auto", width: 800 }}>
+    <div>
+    <h1 className="profile-title"> {selectedData.truckName}</h1>
+    <div className="profile-container">
+    
+    <img className="profile-item" src={selectedData.imageOfTruck}/>
+    <div className="profile-item" style={{ margin: "0 auto", width: 800 }} >
       <Map
         google={props.google}
         zoom={14}
@@ -32,6 +38,10 @@ const TestPage =  (props) => {
           lng: location.lng
         }}
       />
+    </div>
+    </div>
+      <h2 className="profile-info">Address: {selectedData.location}</h2>
+      <h2 className="profile-info">Cusine: {selectedData.cusineType}</h2>
     </div>
   );
 };

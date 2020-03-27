@@ -25,16 +25,16 @@ const [ values, setValues, submitForm ] = useForm({
 
     return (
         <div>
-            <form onSubmit={submitForm} >
+            <form onSubmit={submitForm} className="login-form" >
 
-            <label>  
-            <input type="email" onChange={setValues} values={values} name="email" placeholder="email" />
+            <label className="input-label">  
+            <input type="email" onChange={setValues} values={values} name="email" placeholder="email"  />
             </label> 
-            <label>  
-            <input type="password" onChange={setValues} values={values} name="password" placeholder="password" />
+            <label className="input-label">  
+            <input type="password" onChange={setValues} values={values} name="password" placeholder="password"/>
             </label>
-            <label>  
-                <button>Submit</button>
+            <label className="input-label">  
+                <button className="button">Submit</button>
             </label>
 
             </form>
