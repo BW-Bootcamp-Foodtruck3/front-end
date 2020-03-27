@@ -163,7 +163,49 @@ Html{
   margin-bottom: 5%;
 }
 
-.button {
+.truck-page-container {
+  height: 850px;
+  display: flex;
+  /* border: 2px solid blue; */
+}
+
+.truck-page-container__profile-container {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.profile-container__truck-map {  
+  object-fit: cover;
+  width: 647px;
+  height: 850px;
+}
+
+.profile-container__truck-name {
+  font-size: 4rem;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 700;
+  color: #04e799;
+  /* font-family: 'PT Sans', sans-serif; */
+/* font-family: 'Rubik', sans-serif; */
+}
+
+.profile-info {
+  font-size: 2rem;
+  font-family: 'Rubik', sans-serif;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 150%;
+}
+
+.profile-container__truck-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  box-shadow: #e72804 2px 2px 2px;
+}
+/* .button {
   background-color: #e72804;
   border-radius: 15px;
   margin-top: 20%;
@@ -208,4 +250,4 @@ Html{
 
   font-size: 2.5rem;
   margin-top: 5%;
-}
+} */
