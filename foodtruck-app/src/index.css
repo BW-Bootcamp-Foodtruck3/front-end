@@ -59,8 +59,6 @@ Html{
 /* tertiary color: #e72804 */
 
 .application-container {
-  width: 80%;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -68,12 +66,19 @@ Html{
 
 }
 
+.application-container__header-container {
+  background-image: url("../src/img/food-truck-1024x683.jpg");
+  object-fit: cover;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .logo-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: lightgrey;
-  border-radius: 25px;
 }
 
 .logo-container__img {
@@ -89,6 +94,12 @@ Html{
   justify-content: space-around;
   align-items: center;
   /* border: 2px solid grey; */
+}
+
+.nav-bar__button {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
 }
 
 .nav-bar__links {

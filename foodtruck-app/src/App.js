@@ -28,8 +28,10 @@ function App() {
   console.log(selectedData)
   return (
     <div className="application-container">
-      <Logo />
-      <NavBar/>
+      <div className="application-container__header-container">
+        <Logo />
+        <NavBar/>
+      </div>
       <Route exact path="/" component={Home}></Route> {/*demo purposes*/}
       <Route exact path="/search" render={() => <SearchPage searchResults={searchResults}  setSearchTerm={setSearchTerm} setSelectedData={setSelectedData} />} />
       <Route exact path="/test/:id" render={() => <TestPage selectedData={selectedData}/>} />
