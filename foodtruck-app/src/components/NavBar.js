@@ -8,21 +8,29 @@ const NavBar = () => {
     return (
     <div className="nav-container">
         <nav className="nav-bar">
-          <button className="nav-bar__button">
-          <NavLink className="nav-bar__links" to="/">HOME</NavLink>
-          </button>
+
+          <NavLink className="nav-bar__links" to="/">
+            <button className="nav-bar__button">HOME</button>
+          </NavLink>
           
-          <button className="nav-bar__button">
-          <NavLink className="nav-bar__links"  to="/search">SEARCH</NavLink>
-          </button>
+          
 
-          <button className="nav-bar__button">
-          <NavLink className="nav-bar__links"  to="/login">LOGIN</NavLink>
-          </button>
+          <NavLink className="nav-bar__links"  to="/search">
+            <button className="nav-bar__button">SEARCH</button>
+          </NavLink>
+          
 
-          <button className="nav-bar__button">
-          <NavLink className="nav-bar__links" to="/register">SIGN UP</NavLink>
-          </button>
+
+          <NavLink className="nav-bar__links"  to="/login">
+            <button className="nav-bar__button">LOGIN</button>
+          </NavLink>
+          
+
+          
+          <NavLink className="nav-bar__links" to="/register">
+            <button className="nav-bar__button">SIGN UP</button>
+          </NavLink>
+          
 
         </nav>
     </div>

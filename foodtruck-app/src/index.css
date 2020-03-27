@@ -54,6 +54,7 @@ Html{
 /* ---------------------------------- */
 
 /* font-family: 'PT Sans', sans-serif; */
+/* font-family: 'Rubik', sans-serif; */
 /* main color: #04e799 */
 /* secondary color: #9904e7 */
 /* tertiary color: #e72804 */
@@ -97,21 +98,22 @@ Html{
 }
 
 .nav-bar__button {
-  width: 200px;
+  width: 160px;
   height: auto;
   border-radius: 10px;
 }
 
-.nav-bar__links {
-  font-size: 2.5rem;
+.nav-bar__button {
+  font-size: 2rem;
+  font-family: 'Rubik', sans-serif;
   text-decoration: none;
-  font-family: 'PT Sans', sans-serif;
-  color: #04e799;
+  color: white;
+  background-color: #9904e7;
   font-weight: 700;
 }
 
-.nav-bar__links:hover {
-  color: #9904e7;
+.nav-bar__button:hover {
+  color: #04e799;
 }
 
 .registration-form {
