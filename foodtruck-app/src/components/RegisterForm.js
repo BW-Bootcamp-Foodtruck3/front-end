@@ -5,14 +5,11 @@ const RegistrationForm = () => {
 
     const [ inputState, setInputState ] = useState("");
     const [ users, setUsers ] = useState([{
-        business: "",
-        firstName: "",
-        lastName: "",
-        email: "",
-        password: "",
-        street: "",
-        state: "",
-        zipCode: "",
+        id: "",
+        truckName: "",
+        imageOfTruck: "",
+        cusineType: "",
+        location: "4435 El Camino Real, Irvine, CA"
     }])
 
     const changeHandler = (event) => {
@@ -29,36 +26,36 @@ const RegistrationForm = () => {
 
     return (
         <form onSubmit={submitHandler} className="registration-form">
-            <label htmlFor="business-name__id" className="input-label">Business Name:</label>
+            <label htmlFor="business-name__id" className="input-label">Truck Name:</label>
             <input 
                 className="registration-form__input"
-                placeholder="Business Name"
+                placeholder="Truck Name"
                 type="text"
                 name="business-name"
                 id="business-name__id"
-                value={inputState.business}
+                value={inputState.truckName}
                 onChange={changeHandler}
             ></input>
 
-            <label htmlFor="first-name__id" className="input-label">Owner First Name:</label>
+            <label htmlFor="image-link__id" className="input-label">Image Link:</label>
             <input 
                 className="registration-form__input"
-                placeholder="First Name"
+                placeholder="Image Link"
                 type="text"
-                name="first-name"
-                id="first-name__id"
-                value={inputState.firstName}
+                name="image-link"
+                id="image-link__id"
+                value={inputState.imageOfTruck}
                 onChange={changeHandler}
             ></input>
 
-            <label htmlFor="last-name__id" className="input-label">Last Name:</label>
+            <label htmlFor="category__id" className="input-label">Food Category:</label>
             <input
                 className="registration-form__input"
-                placeholder="Last Name"
+                placeholder="Category"
                 type="text"
-                name="last-name"
-                id="last-name__id"
-                value={inputState.lastName}
+                name="category"
+                id="category__id"
+                value={inputState.cusineType}
                 onChange={changeHandler}
             ></input>
             
@@ -84,18 +81,18 @@ const RegistrationForm = () => {
                 onChange={changeHandler}
             ></input>
 
-            <label htmlFor="street-address__id" className="input-label">Street Address:</label>
+            <label htmlFor="address__id" className="input-label">Street Address:</label>
             <input
                 className="registration-form__input"
-                placeholder="Street Address"
+                placeholder="Address"
                 type="text"
-                name="street-address"
-                id="street-address__id"
-                value={inputState.street}
+                name="address"
+                id="address__id"
+                value={inputState.location}
                 onChange={changeHandler}
             ></input>
 
-            <label htmlFor="state-select__id" className="input-label">State:</label>
+            {/* <label htmlFor="state-select__id" className="input-label">State:</label>
             <select className="registration-form__select" name="state-select" id="state-select__id" value={inputState.state} onChange={changeHandler}>
                 <option value="AL">Alabama</option>
                 <option value="AK">Alaska</option>
@@ -159,7 +156,7 @@ const RegistrationForm = () => {
                 id="zip-code__id"
                 value={inputState.zipCode}
                 onChange={changeHandler}
-            ></input>
+            ></input> */}
 
             <button type="submit">Register</button>
         </form>

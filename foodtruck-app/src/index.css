@@ -54,13 +54,12 @@ Html{
 /* ---------------------------------- */
 
 /* font-family: 'PT Sans', sans-serif; */
+/* font-family: 'Rubik', sans-serif; */
 /* main color: #04e799 */
 /* secondary color: #9904e7 */
 /* tertiary color: #e72804 */
 
 .application-container {
-  width: 80%;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -68,12 +67,19 @@ Html{
 
 }
 
+.application-container__header-container {
+  background-image: url("../src/img/food-truck-1024x683.jpg");
+  object-fit: cover;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .logo-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: lightgrey;
-  border-radius: 25px;
 }
 
 .logo-container__img {
@@ -91,16 +97,23 @@ Html{
   /* border: 2px solid grey; */
 }
 
-.nav-bar__links {
-  font-size: 2.5rem;
+.nav-bar__button {
+  width: 160px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.nav-bar__button {
+  font-size: 2rem;
+  font-family: 'Rubik', sans-serif;
   text-decoration: none;
-  font-family: 'PT Sans', sans-serif;
-  color: #04e799;
+  color: white;
+  background-color: #9904e7;
   font-weight: 700;
 }
 
-.nav-bar__links:hover {
-  color: #9904e7;
+.nav-bar__button:hover {
+  color: #04e799;
 }
 
 .registration-form {
@@ -150,7 +163,49 @@ Html{
   margin-bottom: 5%;
 }
 
-.button {
+.truck-page-container {
+  height: 850px;
+  display: flex;
+  /* border: 2px solid blue; */
+}
+
+.truck-page-container__profile-container {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.profile-container__truck-map {  
+  object-fit: cover;
+  width: 647px;
+  height: 850px;
+}
+
+.profile-container__truck-name {
+  font-size: 4rem;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 700;
+  color: #04e799;
+  /* font-family: 'PT Sans', sans-serif; */
+/* font-family: 'Rubik', sans-serif; */
+}
+
+.profile-info {
+  font-size: 2rem;
+  font-family: 'Rubik', sans-serif;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 150%;
+}
+
+.profile-container__truck-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  box-shadow: #e72804 2px 2px 2px;
+}
+/* .button {
   background-color: #e72804;
   border-radius: 15px;
   margin-top: 20%;
@@ -195,4 +250,4 @@ Html{
 
   font-size: 2.5rem;
   margin-top: 5%;
-}
+} */
